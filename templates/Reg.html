@@ -1,0 +1,154 @@
+<!--author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>    
+<title>Shop Register Page</title>
+<!-- meta_tags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Library Membership form A Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta_tag_Keywords-->
+<!--css_files-->
+	<link rel="stylesheet" href="/static/Reg/css/jquery-ui.css"/>
+	<link href="/static/Reg/css/style.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-->
+	<link rel="stylesheet" href="css/font-awesome.css"><!--font_wesome_icons-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet"><!--online_fonts-->
+	<link href="//fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"><!--online_fonts-->
+<!--//css_files-->
+</head>
+<body>
+<div class="w3l-head">
+<h1>Shop Register Form</h1>
+</div>
+<div class="w3ls-form">
+<form action="/myapp/shop_register_post/" method="post" enctype="multipart/form-data"  >
+    {% csrf_token %}
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Name</label>
+				<div class="w3l-div">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="textfield" placeholder="Name" required=""/>
+				</div>
+			</div> 
+			<div class="w3l-grid2">
+			<label class="text">Phone Number</label>
+			<div class="w3l-div">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="textfield3" placeholder="Phone Number" required=""/>
+			</div>
+			</div>
+			<div class="clear"></div>
+		</div>	
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Email</label>
+				<div class="w3l-div">
+					<i class="fa fa-email" aria-hidden="true"></i>
+				<input type="text" name="textfield2" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+				</div>
+			</div>
+			<div class="w3l-grid2">
+				<label class="text">Place</label>
+				<div class="w3l-div">
+					<i class="fa fa-location-arrow" aria-hidden="true"></i>
+					<input type="text" name="textfield4" placeholder="Place" required=""/>
+				</div>	
+			</div>	
+			<div class="clear"></div>
+		</div>
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Owner name</label>
+				<div class="w3l-div">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<input type="text" name="textfield5" placeholder="Owner Name" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">
+				<label class="text">License No</label>
+				<div class="w3l-div">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<input type="text" name="textfield6" placeholder="License No" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="w3l-last-grid1">
+			<div class="w3l-grid1">	
+				<label class="text">Photo</label>
+				<div class="w3l-div">
+{#					<i class="fa fa-location-arrow" aria-hidden="true"></i>#}
+					<input type="file" name="fileField" placeholder="Photo" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">	
+				<label class="text">Post</label>
+				<div class="w3l-div">
+{#					<i class="fa fa-map-marker" aria-hidden="true"></i>#}
+					<input type="text" name="textfield7" placeholder="Post" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="w3l-right-grid1">
+			<div class="w3l-grid1">
+				<label class="text">Pin</label>
+				<div class="w3l-div">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					<input type="text" name="textfield8" placeholder="Pin" required=""/>
+				</div>
+			</div>
+			<div class="w3l-grid2">
+				<label class="text">District</label>
+				<div class="w3l-div">
+					<i class="fa fa-address-card-o" aria-hidden="true"></i>
+					<input type="text" name="textfield9" placeholder="District" required=""/>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="w3l-right-grid1">
+		<div class="w3l-grid1">
+			<label class="text">Password <span></span></label>
+				<div class="w3l-div">
+				<i class="fa fa-address-card-o" aria-hidden="true"></i>
+					<input type="text" name="textfield10" placeholder="Password" required=""/>
+				</div>
+		</div>	
+			<label class="text">Confirm Password</label>
+			<div class="w3l-grid2">
+				<div class="w3l-div">
+					<i class="fa fa-address-card-o" aria-hidden="true"></i>
+					<input type="text" name="textfield11" placeholder="confirm Password" required=""/>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="w3ls-submit">
+			<input type="submit" value="Register">
+		</div>
+</form>
+</div>
+<footer></footer>
+
+<!-- Default-JavaScript --> <script type="text/javascript" src="/static/Reg/js/jquery-2.1.4.min.js"></script>
+
+<!-- Calendar -->
+<script src="/static/Reg/js/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		$( "#datepicker,#datepicker1" ).datepicker();
+		});
+	</script>
+<!-- //Calendar -->
+</body>
+</html>

@@ -1,0 +1,107 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{% extends 'shop_index.html' %}
+{% block body %}
+<body><form action="/myapp/add_staff_post/" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+<table class=" bg-light"width="95%">
+    <h1 align="center">Add Staff</h1>
+  <tr>
+      <div class="row">
+    <td>Name</td>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" class="form-control" id="textfield" required pattern="[A-Z a-z.]{3,25}" style="width:375px;"/></td>
+
+
+    <td>Email</td>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" class="form-control" id="textfield2" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/></td>
+          </div>
+  </tr>
+  <tr>
+      <div class="row">
+    <td>Phone</td>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3"class="form-control" id="textfield3"  required pattern="[6789][0-9]{9}"style="width:375px;"/></td>
+
+
+    <td>Gender</td>
+    <td>
+        <select name="radio" class="form-control">
+            <option  value="Male" >Male
+            </option><option  value="Female" >Female
+            </option><option  value="other" >other
+            </option>
+
+        </select>
+{#          <input type="radio" name="radio" id="radio" />#}
+{#      Male</p>#}
+{#      <p>#}
+{#        <input type="radio" name="radio" id="radio2" value="Female" />#}
+{#        <label for="radio2"></label>#}
+{#      Female</p>#}
+{#      <p>#}
+{#        <input type="radio" name="radio" id="radio3" value="other" />#}
+{#        <label for="radio3"></label>#}
+{#      Other</p>#}
+
+    </td>
+  </div>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4"class="form-control" id="textfield4" pattern="[A-Z a-z.]{3,25}" style="width:375px;" /></td>
+    <td>Aadhar No</td>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" class="form-control" id="textfield5" /></td>
+  </tr>
+  <tr>
+    <td>District</td>
+    <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" class="form-control" id="textfield6" style="width:375px;"/></td>
+    <td>Post</td>
+    <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" class="form-control" id="textfield7" pattern="[A-Z a-z.]{3,25}" /></td>
+  </tr>
+  <tr>
+    <td>Pin</td>
+    <td><label for="textfield8"></label>
+      <input type="text" name="textfield8" class="form-control" id="textfield8" required pattern="[0-9]{6}" style="width:375px;"/></td>
+
+    <td>Photo</td>
+    <td><label for="fileField"></label>
+      <input type="file" name="fileField" class="form-control" id="textfield9" accept="image/*"/></td>
+  </tr>
+ <tr>
+    <td>Type</td>
+    <td><p>
+        <select name="type" class="form-control"style="width:375px;">
+            <option  value="staff" >Non Delivery Staff
+            </option><option  value="DeliveryStaff" >Delivery Staff
+            </option>
+        </select>
+    <td>Password</td>
+    <td><label for="textfield10"></label>
+      <input type="text" name="textfield10"class="form-control" id="textfield10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/></td>
+  </tr>
+    <tr>
+    <td>Confirm Password</td>
+    <td><label for="textfield11"></label>
+      <input type="text" name="textfield11" class="form-control" id="textfield11" style="width:375px;"/></td>
+  </tr>
+
+  <tr>
+
+    <td colspan="2"style="text-align: center; padding-left: 450px;padding-top: 30px"><input type="submit" name="button" class="btn btn-info" id="button" value="Add" /></td>
+  </tr>
+</table>
+
+</form>
+</body>
+{#</html>#}
+{% endblock %}

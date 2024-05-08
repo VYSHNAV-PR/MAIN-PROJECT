@@ -1,0 +1,39 @@
+{% extends 'shop_index.html' %}
+{% block body %}
+<body>
+<form action="/myapp/add_device_post/"  enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+<table class="table table-bordered bg-light">
+    <h1 align="center">Add Device</h1>
+  <tr>
+    <td>Device Name</td>
+    <td><input name="textfield" type="text"required pattern="[A-Z a-z.]{3,25}" class="form-control" id="textfield" /></td>
+  </tr>
+     <tr>
+    <td>Brand Name</td>
+    <td><input name="brand" type="text"required pattern="[A-Z a-z.]{3,25}" class="form-control" id="textfield" /></td>
+  </tr>
+    <tr>
+  <tr>
+    <td>Photo</td>
+    <td><input name="fileField" type="file" accept="image/*"/></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+  <td><label for="textfield2"></label>
+      <input type="text" name="textfield2"class="form-control" id="textfield2"/></td>
+  </tr>
+  <tr>
+    <td>Amount/Perday</td>
+    <td><input name="textfield3" type="text" class="form-control" id="textfield3" min="100" max="100000"/></td>
+  </tr>
+  <tr>
+{#    <td></td>#}
+    <td align="center"colspan="2"><input type="submit" name="button" class="btn btn-info" id="button" value="Add" /></td>
+  </tr>
+</table>
+
+</form>
+</body>
+{% endblock %}
+{#</html>#}

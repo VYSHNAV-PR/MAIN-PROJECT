@@ -1,0 +1,44 @@
+{% extends "admin_index1.html" %}
+{% block body %}
+
+
+</head>
+
+<body><form action="/myapp/view_feedback_post/#about" method="post"><table class="pull-left">
+    {% csrf_token %}
+    <h1 align="center"><u>View Feedbacks</u></h1><br>
+  <tr>
+    <th scope="row"><label>From </label><input type="date" name="textfield1" /></th>
+    <th scope="row"><label>To</label><input type="date" name="textfield2" /></th>
+    <th><input type="submit" name="Submit" value="Search" class="btn btn-success" /></th>
+  </tr>
+    <br>
+    <br>
+</table><table class="table table-bordered">
+  <tr>
+    <th scope="row">Sl No</th>
+
+    <th>Name</th>
+    <th>Date</th>
+    <th>Feedback</th>
+{#    <th>Reply </th>#}
+
+    </tr>
+    {% for i in data %}
+  <tr>
+    <th scope="row">{{ forloop.counter }}&nbsp;</th>
+    <td>&nbsp;{{ i.USER.name }}</td>
+    <td>&nbsp;{{ i.date }}</td>
+    <td>&nbsp;{{ i.feedback }}</td>
+
+{#      {% if i.reply == 'Pending' %}#}
+{#    <td><a href="/myapp/send_reply/{{ i.id }}#about" class="btn btn-success">Reply</a></td>#}
+{#          {% else %}#}
+{#    <td>{{ i.reply }}</td>#}
+{#  {% endif %}#}
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}
